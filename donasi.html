@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donasi - OurCharity</title>
+    <link rel="stylesheet" href="donasi.css">
+</head>
+<body>
+    
+    <div class="donasi-container">
+        <h1>Bantu Renovasi Sekolah</h1>
+        <p>Yuk bantu anak-anak di desa terpencil mendapatkan sekolah yang layak.</p>
+
+        <form id="form-donasi">
+            <input type="text" name="nama" placeholder="Nama Anda" required>
+            <input type="number" name="nominal" placeholder="Nominal Donasi (Rp)" required>
+            <input type="text" name="kontak" placeholder="Email atau No. WhatsApp (opsional)">
+        </form>
+
+        <div class="metode-pembayaran">
+            <h3>Transfer ke:</h3>
+            <p><strong>Nama:</strong> Komunitas OurCharity</p>
+            <p><strong>Bank:</strong> BCA</p>
+            <p>
+                <strong>No. Rek:</strong>
+                <span id="nomor-rekening">123456890</span>
+                <button type="button" id="copy-btn">Copy</button>
+            </p>
+
+            <h3>Atau Scan QRIS:</h3>
+            <img src="" alt="QRIS" class="qris-image">
+        </div>
+
+        <button type="submit" form="form-donasi">Saya Sudah Transfer</button>
+    </div>
+
+    <script>
+        document.getElementById("form-donasi").addEventListener
+        ("submit", function (e) {
+            e.preventDefault();
+            alert("Terima kasih! Silakan tunggu konfirmasi dari tim kami");
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
