@@ -8,40 +8,31 @@
 </head>
 <body>
     
-    <div class="donasi-container">
-        <h1>Bantu Renovasi Sekolah</h1>
-        <p>Yuk bantu anak-anak di desa terpencil mendapatkan sekolah yang layak.</p>
+    <h1 id="judul-campaign">Judul Campaign</h1>
+    <p id="deskripsi-campaign">Deskripsi campaign di sini.</p>
 
-        <form id="form-donasi">
-            <input type="text" name="nama" placeholder="Nama Anda" required>
-            <input type="number" name="nominal" placeholder="Nominal Donasi (Rp)" required>
-            <input type="text" name="kontak" placeholder="Email atau No. WhatsApp (opsional)">
-        </form>
+    <form id="form-donasi">
+        <input type="text" name="nama" placeholder="Nama Anda" required />
+        <input type="number" name="nominal" placeholder="Nominal Donasi (Rp)" required />
+        <input type="text" name="kontak" placeholder="Email atau No. WhatsApp (opsional)" />
+    </form>
 
-        <div class="metode-pembayaran">
-            <h3>Transfer ke:</h3>
-            <p><strong>Nama:</strong> Komunitas OurCharity</p>
-            <p><strong>Bank:</strong> BCA</p>
-            <p>
-                <strong>No. Rek:</strong>
-                <span id="nomor-rekening">123456890</span>
-                <button type="button" id="copy-btn">Copy</button>
-            </p>
+    <div class="metode-pembayaran">
+        <h3>Transfer ke:</h3>
+        <p><strong>Nama:</strong> <span id="nama-rekening">-</span></p>
+        <p><strong>Bank:</strong> <span id="bank-rekening">-</span></p>
+        <p>
+            <strong>No. Rek:</strong> <span id="nomor-rekening">-</span>
+            <button type="button" id="copy-btn">Copy</button>
+        </p>
 
-            <h3>Atau Scan QRIS:</h3>
-            <img src="" alt="QRIS" class="qris-image">
-        </div>
+        <h3>Atau Scan QRIS:</h3>
+        <img src="assets/contoh_qris.png" alt="QRIS" class="qris-img" id="gambar-qris">
 
         <button type="submit" form="form-donasi">Saya Sudah Transfer</button>
     </div>
 
-    <script>
-        document.getElementById("form-donasi").addEventListener
-        ("submit", function (e) {
-            e.preventDefault();
-            alert("Terima kasih! Silakan tunggu konfirmasi dari tim kami");
-            window.location.href = "index.html";
-        });
-    </script>
+    <script src="donasi.js"></script>
+
 </body>
 </html>
